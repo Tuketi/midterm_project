@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Movie List, yo</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<link rel="stylesheet" href="./css/main.css" />
+	<script src="./js/get_movies.js"></script>
+</head>
+<body>
+
+<!-- Main page -->
+<div data-role='page' id='movie_list'>
+
+	<div data-role='header'>
+		<input type="search" name="searchbar" placeholder='search for title' data-mini="true" autocomplete='off' onkeyup='showMovies(this.value)'>
+	</div>
+
+	<div data-role='content' id='list_area_movie'></div>
+	
+</div>
+
+<!-- Movie Details page -->
+<div data-role='page' id='movie_details'>
+	
+	<div data-role='header' data-theme='c' style='height:40px !important;'>
+		<a href='#movie_list' data-icon='home'>Home</a>
+		&nbsp;
+	</div>
+
+	<div data-role='content' id='movie_info_area'></div>
+	
+</div>
+
+</body>
+</html>
